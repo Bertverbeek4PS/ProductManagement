@@ -9,42 +9,42 @@ tableextension 70000 WorkOrderExt extends "Work Order"
         }
         field(70001; "Project Manager"; Code[20])
         {
-            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('PROJECTM')));
+            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('PROJECTM'), "Project No." = FIELD("Source No.")));
             Caption = 'Project Manager';
             Editable = false;
             FieldClass = FlowField;
         }
         field(70002; "Business Specialist"; Code[20])
         {
-            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('BUSSPECIAL')));
+            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('BUSSPECIAL'), "Project No." = FIELD("Source No.")));
             Caption = 'Business Specialist';
             Editable = false;
             FieldClass = FlowField;
         }
         field(70003; "Developer"; Code[20])
         {
-            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('DEVELOPER')));
+            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('DEVELOPER'), "Project No." = FIELD("Source No.")));
             Caption = 'Developer';
             Editable = false;
             FieldClass = FlowField;
         }
         field(70004; "Product Owner"; Code[20])
         {
-            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('PRODOWNER')));
+            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('PRODOWNER'), "Project No." = FIELD("Source No.")));
             Caption = 'Product Owner';
             Editable = false;
             FieldClass = FlowField;
         }
         field(70005; "Tester"; Code[20])
         {
-            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('TESTER')));
+            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('TESTER'), "Project No." = FIELD("Source No.")));
             Caption = 'Tester';
             Editable = false;
             FieldClass = FlowField;
         }
         field(70006; "Documentalist"; Code[20])
         {
-            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('DOCUMENT')));
+            CalcFormula = Lookup("Project Responsible Person"."Employee No." WHERE(Responsibility = CONST('DOCUMENT'), "Project No." = FIELD("Source No.")));
             Caption = 'Documentalist';
             Editable = false;
             FieldClass = FlowField;
